@@ -9,3 +9,10 @@
        command: ls -la /root 
        register: ls_out
      - debug: var=ls_out.stdout
+     - name: Install the provided package
+       yum:
+         pkg: "{{ item }}"
+         state: latest
+       with_items:
+       - telnet
+       - telnet-server
