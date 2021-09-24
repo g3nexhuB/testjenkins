@@ -7,3 +7,5 @@
   tasks:
      - name: verify on hosts
        command: ls -la /root 
+       register: ls_out
+     - debug: var=ls_out.stdout
