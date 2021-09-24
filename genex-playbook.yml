@@ -9,10 +9,5 @@
        command: ls -la /root 
        register: ls_out
      - debug: var=ls_out.stdout
-     - name: Install the provided package
-       apt:
-         pkg: "{{ item }}"
-         state: latest
-       with_items:
-       - telnet
-       - telnet-server
+     - name : Install Telnet using apt
+       apt : name=telnet update_cache=yes
