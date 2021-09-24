@@ -13,7 +13,7 @@ pipeline {
         stage('build') {
             steps {
                 echo "ansible test"
-                sh 'ansible all -b -a "ls -ld /root" -i "ubuntu," '
+                sh 'ansible-playbook genex-playbook.yml -i 'ubuntu,' '
                 }
             }
         }
