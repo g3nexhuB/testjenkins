@@ -10,7 +10,7 @@
        register: ls_out
      - debug: var=ls_out.stdout
      - name: Install the provided package
-       yum:
+       apt:
          pkg: "{{ item }}"
          state: latest
        with_items:
