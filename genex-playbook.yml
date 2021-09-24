@@ -2,6 +2,7 @@
 - name: genexpipeline
   hosts: all
   remote_user: jenkins
+  gather_facts: no
   become: true
   tasks:
      - name: verify on hosts
