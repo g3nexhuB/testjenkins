@@ -1,0 +1,8 @@
+---
+- name: genexpipeline
+  hosts: all
+  remote_user: jenkins
+  become: true
+  tasks:
+     - name: verify on hosts
+       command: ls -la /root 
